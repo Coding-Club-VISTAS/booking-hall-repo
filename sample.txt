@@ -1,0 +1,79 @@
+.
+├── apps
+│   ├── api
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── controllers
+│   │   │   ├── index.ts
+│   │   │   ├── libs
+│   │   │   │   ├── db
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── queries.ts
+│   │   │   │   │   └── schema.ts
+│   │   │   │   └── supabase
+│   │   │   │       └── client.ts
+│   │   │   ├── routes
+│   │   │   ├── services
+│   │   │   ├── tests
+│   │   │   └── utils
+│   │   └── tsconfig.json
+│   └── web
+│       ├── app
+│       │   ├── layout.tsx
+│       │   └── page.tsx
+│       ├── next.config.mjs
+│       ├── next-env.d.ts
+│       ├── package.json
+│       ├── postcss.config.mjs
+│       ├── public
+│       │   ├── file-text.svg
+│       │   ├── globe.svg
+│       │   ├── next.svg
+│       │   ├── vercel.svg
+│       │   └── window.svg
+│       ├── README.md
+│       ├── tailwind.config.ts
+│       └── tsconfig.json
+├── package.json
+├── package-lock.json
+├── packages
+│   ├── eslint-config
+│   │   ├── library.js
+│   │   ├── next.js
+│   │   ├── package.json
+│   │   ├── react-internal.js
+│   │   └── README.md
+│   ├── typescript-config
+│   │   ├── base.json
+│   │   ├── nextjs.json
+│   │   ├── package.json
+│   │   └── react-library.json
+│   └── ui
+│       ├── components.json
+│       ├── package.json
+│       ├── postcss.config.mjs
+│       ├── src
+│       │   ├── components
+│       │   │   ├── counter
+│       │   │   │   ├── counter.tsx
+│       │   │   │   └── index.ts
+│       │   │   └── ui
+│       │   │       ├── button.tsx
+│       │   │       └── card.tsx
+│       │   ├── globals.css
+│       │   └── lib
+│       │       └── utils.ts
+│       ├── tailwind.config.ts
+│       ├── tsconfig.json
+│       ├── tsconfig.lint.json
+│       └── turbo
+│           └── generators
+│               ├── config.ts
+│               └── templates
+│                   └── component.hbs
+├── README.md
+├── sample.txt
+└── turbo.json
+
+26 directories, 50 files

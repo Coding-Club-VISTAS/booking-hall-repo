@@ -1,81 +1,123 @@
-# Turborepo starter
+# Vels Institutions Booking Application
 
-This is an official starter Turborepo.
+This project is a comprehensive booking application designed for Vels Institutions. The application provides functionalities for room and facility bookings, equipment reservations, event scheduling, and user management. The project utilizes a modern monorepo setup to manage multiple packages and applications efficiently.
 
-## Using this example
+## Table of Contents
 
-Run the following command:
+1. [Project Structure](#project-structure)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
+4. [Development Guide](#development-guide)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+## Project Structure
 
 ```
-cd my-turborepo
-pnpm build
+Vels Institutions Booking Application
+├── apps
+│   ├── api                  # Backend service
+│   │   ├── src              # Source code for API
+│   │   ├── package.json     # NPM configuration for API
+│   │   └── tsconfig.json    # TypeScript configuration for API
+│   └── web                  # Frontend application
+│       ├── app              # Next.js app directory
+│       ├── public           # Static files
+│       ├── package.json     # NPM configuration for Web
+│       ├── next.config.mjs  # Next.js configuration
+│       ├── postcss.config.mjs  # PostCSS configuration
+│       ├── tailwind.config.ts  # Tailwind CSS configuration
+│       └── tsconfig.json    # TypeScript configuration for Web
+├── packages
+│   ├── eslint-config        # Shared ESLint configuration
+│   ├── typescript-config    # Shared TypeScript configurations
+│   └── ui                   # Shared UI components and utilities
+│       ├── src              # Source code for UI components
+│       ├── globals.css      # Global styles
+│       └── tailwind.config.ts # Tailwind CSS configuration
+├── package.json             # Root package configuration
+├── turbo.json               # Turborepo configuration
+└── README.md                # Project documentation
 ```
 
-### Develop
+## Technologies Used
 
-To develop all apps and packages, run the following command:
+- **Turborepo**: For managing the monorepo and optimizing build processes.
+- **Next.js**: A React framework for building the frontend.
+- **Shadcn UI**: Component library for consistent UI design.
+- **Supabase**: Backend as a Service for database and authentication.
+- **Hono.js**: Lightweight web framework for API development.
+- **TypeScript**: For type-safe JavaScript development.
+- **Zod**: For runtime type checking and validation.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
-```
-cd my-turborepo
-pnpm dev
-```
+## Getting Started
 
-### Remote Caching
+### Prerequisites
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+- **Node.js** (v14 or higher)
+- **Yarn** (preferred) or **npm**
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+### Installation
 
-```
-cd my-turborepo
-npx turbo login
-```
+1. **Clone the repository**:
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+   ```bash
+   git clone https://github.com/Coding-Club-VISTAS/booking-hall-repo.git
+   cd booking-hall-repo
+   ```
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+2. **Install dependencies**:
 
-```
-npx turbo link
-```
+   ```bash
+   yarn install
+   ```
 
-## Useful Links
+### Running the Application
 
-Learn more about the power of Turborepo:
+To start the development servers for both the frontend and backend:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+1. **Start the API server**:
+
+   ```bash
+   yarn turbo run dev --filter=api
+   ```
+
+2. **Start the Web server**:
+
+   ```bash
+   yarn turbo run dev --filter=web
+   ```
+
+Both servers will be accessible locally, typically at `http://localhost:3000` for the frontend.
+
+## Development Guide
+
+### API Development (`apps/api`)
+
+- **Location**: `apps/api/src`
+- **Start**: `yarn turbo run dev --filter=api`
+- **Main file**: `index.ts`
+
+The API is developed using Hono.js, with Supabase handling data storage and authentication. Routes and services are defined in the respective directories under `src`.
+
+### Web Development (`apps/web`)
+
+- **Location**: `apps/web`
+- **Start**: `yarn turbo run dev --filter=web`
+- **Main files**: `app/page.tsx`, `app/layout.tsx`
+
+The frontend uses Next.js, with Shadcn UI components for a consistent design and Tailwind CSS for styling.
+
+### Shared Packages
+
+- **UI Components**: Located in `packages/ui`
+- **Configurations**: Shared ESLint and TypeScript configurations in `packages/eslint-config` and `packages/typescript-config`.
+
+## Contributing
+
+Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) to get started.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
