@@ -8,8 +8,9 @@ This project is a comprehensive booking application designed for Vels Institutio
 2. [Technologies Used](#technologies-used)
 3. [Getting Started](#getting-started)
 4. [Development Guide](#development-guide)
-5. [Contributing](#contributing)
-6. [License](#license)
+5. [Adding New Components](#adding-new-components)
+6. [Contributing](#contributing)
+7. [License](#license)
 
 ## Project Structure
 
@@ -113,6 +114,27 @@ The frontend uses Next.js, with Shadcn UI components for a consistent design and
 
 - **UI Components**: Located in `packages/ui`
 - **Configurations**: Shared ESLint and TypeScript configurations in `packages/eslint-config` and `packages/typescript-config`.
+
+## Adding New Components
+
+To add new components to the project, follow these steps:
+
+1. **Shadcn UI Components**: 
+
+   - Copy the relevant code from the Shadcn UI component into the `components/ui` folder.
+   - Ensure the component is properly styled and integrated with Tailwind CSS.
+
+2. **Custom Components**:
+
+   - Place custom components in the `components` directory.
+   - Refer to the example provided by the `Counter` component for structure and conventions.
+
+3. **Component Integration**:
+
+   - Import and use the new components in the appropriate files under `apps/web` or `packages/ui`.
+   - Ensure all components are properly tested and documented.
+
+For guidance on component structure, refer to the `Counter` component example in the `components` directory.
 
 ## Contributing
 
