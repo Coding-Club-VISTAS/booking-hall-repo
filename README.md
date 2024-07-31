@@ -134,6 +134,8 @@ To add new components to the project, follow these steps:
    - Import and use the new components in the appropriate files under `apps/web` or `packages/ui`.
    - Ensure all components are properly tested and documented.
 
+Note: Look at ```components/ui/button.tsx``` for the changes to be done when copying the shadcn component.
+
 For guidance on component structure, refer to the `Counter` component example in the `components` directory.
 
 ## Contributing
