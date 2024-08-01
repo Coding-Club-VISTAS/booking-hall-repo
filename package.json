@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo dev --filter=./apps/web-react --filter=./apps/api",
+    "dev:frontend": "turbo run dev --filter=./apps/web-react",
+    "dev:backend": "turbo dev --filter=./apps/api",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "ui:add": "npm run ui:add --workspace=@repo/ui --"
@@ -19,6 +21,8 @@
   "packageManager": "npm@10.2.4",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "apps/web-react",
+    "apps/web-api"
   ]
 }

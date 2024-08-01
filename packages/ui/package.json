@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "ui:add": "npx shadcn-ui@latest add" 
+    "ui:add": "npx shadcn-ui@latest add"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/themes": "^3.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.417.0",
@@ -37,8 +38,8 @@
     "./tailwind.config": "./tailwind.config.ts",
     "./lib/*": "./src/lib/*.ts",
     "./components/*": [
-      "./src/components/*.tsx",
-      "./src/components/*.ts"
+	"./src/components/*.tsx",
+	"./src/components/*.ts"
     ]
   }
 }
