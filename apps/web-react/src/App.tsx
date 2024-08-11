@@ -1,16 +1,9 @@
-// import { Link } from "react-router-dom";
-// import { Card, CardDescription, CardContent } from "@repo/ui/components/ui/card";
-// import { Button } from "@repo/ui/components/ui/button";
-import Onboarding from './Components/Onboarding';
+import LoginPage from "./Components/loginPage.tsx"
 
 function App() {
     return (
-        <div className="h-[100vh]  flex flex-col justify-center items-center bg-[#e4e4fa]">
-            
-                <Onboarding />
-                {/* <Onboarding1 /> */}
-                {/* <Onboarding3 /> */}
-            
+        <div className="h-[100vh] flex flex-col items-center justify-center">
+            <LoginPage/
         </div>
     );
 }
